@@ -82,7 +82,7 @@
           keys.push(resolution.join('x'));
         }
       }
-      keys.push(new Date().getTimezoneOffset());
+      //keys.push(new Date().getTimezoneOffset());
       keys.push(this.hasSessionStorage());
       keys.push(this.hasLocalStorage());
       keys.push(this.hasIndexDb());
