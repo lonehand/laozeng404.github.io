@@ -76,12 +76,13 @@
       keys.push(navigator.userAgent);
       keys.push(navigator.language);
       keys.push(screen.colorDepth);
-      if (this.screen_resolution) {
-        var resolution = this.getScreenResolution();
-        if (typeof resolution !== 'undefined'){ // headless browsers, such as phantomjs
-          keys.push(resolution.join('x'));
-        }
-      }
+      //if (this.screen_resolution) {
+        //var resolution = this.getScreenResolution();
+        //if (typeof resolution !== 'undefined'){ // headless browsers, such as phantomjs
+          //keys.push(resolution.join('x'));
+        //}
+      //}
+      keys.push(window.screen.width+"*"+window.screen.height);
       //keys.push(new Date().getTimezoneOffset());
       keys.push(this.hasSessionStorage());
       keys.push(this.hasLocalStorage());
