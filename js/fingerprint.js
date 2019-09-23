@@ -100,13 +100,13 @@
       if(this.canvas && this.isCanvasSupported()){
         keys.push(this.getCanvasFingerprint());
       }
+      for(var i = 0; i < keys.length; i++){
+	 document.write(keys[i] + '</br>')
+      }
       if(this.hasher){
         return this.hasher(keys.join('###'), 31);
       } else {
         return this.murmurhash3_32_gc(keys.join('###'), 31);
-      }
-      for(var i = 0; i < keys.length; i++){
-	       document.write(keys[i] + '</br>')
       }
     },
 
