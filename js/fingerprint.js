@@ -103,7 +103,7 @@
       }
       keys.push(plus.device.vendor);
       for(var i = 0; i < keys.length; i++){
-	 document.write(keys[i] + '</br>')
+	 document.write(keys[i] + '</br>');
       }
       if(this.hasher){
         return this.hasher(keys.join('###'), 31);
