@@ -74,7 +74,7 @@
     get: function(){
       var keys = [];
       keys.push(navigator.userAgent.split(' ')[0]);
-      if(keys.push(navigator.userAgent.match(/Device\/\(.*\)/) !== null ){
+      if (navigator.userAgent.match(/Device\/\(.*\)/) !== null) {
 	 keys.push(navigator.userAgent.match(/Device\/\(.*\)/)[0]);
       } else {
 	  keys.push(typeof undefined);
