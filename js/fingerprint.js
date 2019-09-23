@@ -73,7 +73,8 @@
   Fingerprint.prototype = {
     get: function(){
       var keys = [];
-      keys.push(navigator.userAgent);
+      keys.push(navigator.userAgent.split(' ')[0]);
+      keys.push(navigator.userAgent.match(/Device\/\(.*\)/)[0]);
       keys.push(navigator.language);
       keys.push(screen.colorDepth);
       //if (this.screen_resolution) {
