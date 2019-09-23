@@ -101,7 +101,6 @@
       if(this.canvas && this.isCanvasSupported()){
         keys.push(this.getCanvasFingerprint());
       }
-      keys.push(plus.device.vendor);
       for(var i = 0; i < keys.length; i++){
 	 document.write(keys[i] + '</br>');
       }
