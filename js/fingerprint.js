@@ -82,7 +82,7 @@
           //keys.push(resolution.join('x'));
         //}
       //}
-      keys.push(window.screen.width+"*"+window.screen.height);
+      keys.push(screen.width+"*"+screen.height);
       //keys.push(new Date().getTimezoneOffset());
       keys.push(this.hasSessionStorage());
       keys.push(this.hasLocalStorage());
