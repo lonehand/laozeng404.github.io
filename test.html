@@ -3,5 +3,8 @@
 <script>
 	var fingerprint = new Fingerprint({canvas: true}).get();
 	alert("Your canvas fingerprint is " + fingerprint);
+	document.addEventListener("plusready",function(){
+   		alert(plus.device.vendor);
+	});
 </script>
 </html>
