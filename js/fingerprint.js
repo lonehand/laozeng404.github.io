@@ -108,9 +108,9 @@
       if(this.canvas && this.isCanvasSupported()){
         keys.push(this.getCanvasFingerprint());
       }
-      for(var i = 0; i < keys.length; i++){
-	 document.write(keys[i] + '</br>');
-      }
+      //for(var i = 0; i < keys.length; i++){
+	 //document.write(keys[i] + '</br>');
+      //}
       var fps = new Array();
       fps[0] = this.getCanvasFingerprint();
       if(this.hasher){
