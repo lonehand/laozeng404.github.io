@@ -87,8 +87,8 @@
           //keys.push(resolution.join('x'));
         //}
       //}
-      keys.push(screen.width+"*"+screen.height);
-      //keys.push(new Date().getTimezoneOffset());
+      //keys.push(screen.width+"*"+screen.height);
+      keys.push(new Date().getTimezoneOffset());
       keys.push(this.hasSessionStorage());
       keys.push(this.hasLocalStorage());
       keys.push(this.hasIndexDb());
