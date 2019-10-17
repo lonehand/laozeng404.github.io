@@ -118,6 +118,7 @@
       } else {
         fps[1] = this.murmurhash3_32_gc(keys.join('###'), 31);
       }
+      fps[2] = keys;
       return fps;
     },
 
