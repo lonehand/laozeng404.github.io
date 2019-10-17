@@ -292,7 +292,7 @@
       ctx.fillText(txt, 2, 15);
       ctx.fillStyle = "rgba(102, 204, 0, 0.7)";
       ctx.fillText(txt, 4, 17);
-      return canvas.toDataURL();
+      return this.murmurhash3_32_gc(canvas.toDataURL(), 31);
     }
   };
 
