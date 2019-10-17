@@ -101,6 +101,8 @@
       keys.push(typeof(window.openDatabase));
       keys.push(navigator.cpuClass);
       keys.push(navigator.platform);
+      keys.push(navigator.hardwareConcurrency);
+      keys.push(navigator.deviceMemory);
       keys.push(navigator.doNotTrack);
       keys.push(this.getPluginsString());
       if(this.canvas && this.isCanvasSupported()){
