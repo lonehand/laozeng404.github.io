@@ -73,12 +73,12 @@
   Fingerprint.prototype = {
     get: function(){
       var keys = [];
-      keys.push(navigator.userAgent.split(' ')[0]);
-      if (navigator.userAgent.match(/Device\/\(.*\)/) !== null) {
-	 keys.push(navigator.userAgent.match(/Device\/\(.*\)/)[0]);
-      } else {
-	  keys.push(typeof undefined);
-      }
+      keys.push(navigator.userAgent);
+      //if (navigator.userAgent.match(/Device\/\(.*\)/) !== null) {
+	 //keys.push(navigator.userAgent.match(/Device\/\(.*\)/)[0]);
+      //} else {
+	  //keys.push(typeof undefined);
+      //}
       keys.push(navigator.language);
       keys.push(screen.colorDepth);
       //if (this.screen_resolution) {
