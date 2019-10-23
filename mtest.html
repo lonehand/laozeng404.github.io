@@ -1,0 +1,20 @@
+<html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.js"></script>
+<script>
+if (window.requestIdleCallback) {
+    requestIdleCallback(function () {
+        Fingerprint2.getV18(function (fp2, Components) {
+          alert(fp2)
+          console.log(Components)// an array of components: {key: ..., value: ...}
+        })
+    })
+} else {
+    setTimeout(function () {
+        Fingerprint2.getV18(function (fp2, Components) {
+          alert(fp2)
+          console.log(Components)// an array of components: {key: ..., value: ...}
+        })  
+    }, 500)
+}
+</script>
+</html>
