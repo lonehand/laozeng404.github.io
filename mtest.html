@@ -4,15 +4,15 @@
 if (window.requestIdleCallback) {
     requestIdleCallback(function () {
         Fingerprint2.getV18(function (fp2, Components) {
-          document.write(fp2)
-          alert(Components)// an array of components: {key: ..., value: ...}
+          alert(fp2)
+          document.write(JSON.stringify(Components))// an array of components: {key: ..., value: ...}
         })
     })
 } else {
     setTimeout(function () {
         Fingerprint2.getV18(function (fp2, Components) {
-          document.write(fp2)
-          alert(Components)// an array of components: {key: ..., value: ...}
+          alert(fp2)
+          document.write(JSON.stringify(Components))// an array of components: {key: ..., value: ...}
         })  
     }, 500)
 }
