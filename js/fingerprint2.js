@@ -701,7 +701,7 @@
     var available = []
     for (var i = 0, l = fontList.length; i < l; i++) {
       if (isFontAvailable(fontsSpans[fontList[i]])) {
-        available.push(fontList[i])
+        available.push(i)
       }
     }
 
