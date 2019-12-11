@@ -1417,8 +1417,9 @@
           }
         }
       }
-      var murmur = x64hash128(map(newComponents, function (component) { return component.value }).join('~~~'), 31)
-      callback(murmur, newComponents)
+      var newresults = map(newComponents, function (component) { return component.value }).join('~~~')
+      var murmur = x64hash128(newresults, 31)
+      callback(murmur, newComponents, newresults)
     })
   }
 
