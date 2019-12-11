@@ -945,7 +945,7 @@
     ctx.arc(75, 75, 25, 0, Math.PI * 2, true)
     ctx.fill('evenodd')
 
-    if (canvas.toDataURL) { result.push('canvas fp:' + canvas.toDataURL()) }
+    if (canvas.toDataURL) { result.push('canvas fp:' + x64hash128(canvas.toDataURL(), 31)) }
     return result
   }
   var getWebglFp = function () {
@@ -1003,7 +1003,7 @@
     gl.uniform2f(program.offsetUniform, 1, 1)
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, vertexPosBuffer.numItems)
     try {
-      result.push(gl.canvas.toDataURL())
+      result.push(x64hash128(gl.canvas.toDataURL(), 31))
     } catch (e) {
       /* .toDataURL may be absent or broken (blocked by extension) */
     }
@@ -1397,9 +1397,12 @@
               return [p[0], p[1], mimeTypes].join('::')
             })
           })
-        } else if (['canvas', 'webgl'].indexOf(component.key) !== -1) {
+        } else if (['canvas'].indexOf(component.key) !== -1) {
           newComponents.push({ key: component.key, value: component.value.join('~') })
-        } else if (['sessionStorage', 'localStorage', 'indexedDb', 'addBehavior', 'openDatabase'].indexOf(component.key) !== -1) {
+        } else if (['webgl'].indexOf(component.key) !== -1) {
+          newComponents.push({ key: component.key, value: x64hash128(component.value.join('~'), 31) })
+        } 
+        else if (['sessionStorage', 'localStorage', 'indexedDb', 'addBehavior', 'openDatabase'].indexOf(component.key) !== -1) {
           if (component.value) {
             newComponents.push({ key: component.key, value: 1 })
           } else {
