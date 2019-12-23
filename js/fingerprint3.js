@@ -1278,8 +1278,6 @@
     { key: 'deviceMemory', getData: deviceMemoryKey },
     { key: 'pixelRatio', getData: pixelRatioKey },
     { key: 'hardwareConcurrency', getData: hardwareConcurrencyKey },
-    { key: 'screenResolution', getData: screenResolutionKey },
-    { key: 'availableScreenResolution', getData: availableScreenResolutionKey },
     { key: 'timezoneOffset', getData: timezoneOffset },
     { key: 'timezone', getData: timezone },
     { key: 'sessionStorage', getData: sessionStorageKey },
