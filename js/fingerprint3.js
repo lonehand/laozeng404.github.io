@@ -432,30 +432,6 @@
   var pixelRatioKey = function (done, options) {
     done(window.devicePixelRatio || options.NOT_AVAILABLE)
   }
-  var screenResolutionKey = function (done, options) {
-    done(getScreenResolution(options))
-  }
-  var getScreenResolution = function (options) {
-    var resolution = [window.screen.width, window.screen.height]
-    if (options.screen.detectScreenOrientation) {
-      resolution.sort().reverse()
-    }
-    return resolution
-  }
-  var availableScreenResolutionKey = function (done, options) {
-    done(getAvailableScreenResolution(options))
-  }
-  var getAvailableScreenResolution = function (options) {
-    if (window.screen.availWidth && window.screen.availHeight) {
-      var available = [window.screen.availHeight, window.screen.availWidth]
-      if (options.screen.detectScreenOrientation) {
-        available.sort().reverse()
-      }
-      return available
-    }
-    // headless browsers
-    return options.NOT_AVAILABLE
-  }
   var timezoneOffset = function (done) {
     done(new Date().getTimezoneOffset())
   }
