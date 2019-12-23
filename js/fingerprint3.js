@@ -423,6 +423,9 @@
   var languageKey = function (done, options) {
     done(navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage || options.NOT_AVAILABLE)
   }
+  var platform = function (done) {
+    done(navigator.platform)
+  }
   var colorDepthKey = function (done, options) {
     done(window.screen.colorDepth || options.NOT_AVAILABLE)
   }
@@ -1277,6 +1280,7 @@
     { key: 'colorDepth', getData: colorDepthKey },
     { key: 'deviceMemory', getData: deviceMemoryKey },
     { key: 'pixelRatio', getData: pixelRatioKey },
+    { key: 'platform', getData: platform },
     { key: 'hardwareConcurrency', getData: hardwareConcurrencyKey },
     { key: 'timezoneOffset', getData: timezoneOffset },
     { key: 'timezone', getData: timezone },
