@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .container{
+      margin: 0 auto;
+      width: 520px;
+      height: 372px;
+    }
+        *{
+            margin: 0;padding: 0;
+        }
+        img{
+            width:600px;height:500px;
+        }
+        #canvas{
+            position: absolute;top:0;left:0;
+        }
+        #canvas1{
+            position: absolute;top:710px;left:110px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <canvas style="background: url(https://47.98.196.3/static/*.png);background-size: 100% 100%" id="canvas" width=520 height=372></canvas>
+</div>
+<script src="https://47.98.196.3/static/Scratch.js"></script>
+<script>
+	alert("提前祝你新年快乐，送你一张刮刮卡，有机会获得100元美团现金卡！");
+	document.body.style.overflow='hidden';
+    var scratch = new Scratch("canvas",{ //第一个参数是canvas的id,,其他都可传可不传
+        //width : 600,//画布的宽度，，不传为默认宽度
+        //height: 500,//画布的高度，，不传为默认宽度
+        top : 0,//画布的高度偏移量。。不传为默认距离body的高度
+        left : 0,//画布的宽度偏移量。。不传为默认距离body的宽度
+        color: "gray",//画布的颜色
+       // url : "/uploadImg/images/11111111.jpg",//上传图片路径，如果上传，则color无效
+        handWidth : 50,//画布的手势宽度
+        percent : 0.5,//完成百分比，，默认 百分之50
+        time : 20,//达到完成条件，弹出success 时间 默认200ms
+        autoClick : true,// true 达成条件 canvas全部透明，，false 不全部透明 ，可在回调函数里面自行关闭
+        success : function(){//完成百分比之后回调函数，
+            console.log("完成了")
+        }
+    })
+    scratch.init()//必须执行一次初始化
+    // scratch.initCanvas() //还原画布
+
+
+</script>
+</body>
+
+</html>
