@@ -3,7 +3,7 @@
 <script>
 	var fingerprint = new Fingerprint2({canvas: true}).get();
 	//返回一个数组，fingerprint[0]为初版canvas指纹，fingerprint[1]为改进版canvas指纹，fingerprint[2]为改进版canvas指纹取的所有参数
-	document.write("Your canvas fingerprint1 is " + fingerprint[0] + '</br>');
+	//document.write("Your canvas fingerprint1 is " + fingerprint[0] + '</br>');
 	document.write("Your canvas fingerprint2 is " + fingerprint[1] + '</br>');
 	setTimeout("console.log(fingerprint[2])", 3000 )
 </script>
