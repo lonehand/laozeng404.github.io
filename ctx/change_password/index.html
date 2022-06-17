@@ -40,6 +40,8 @@
             xhr.onreadystatechange = function() {//Call a function when the state changes.
                 if(xhr.readyState === XMLHttpRequest.DONE) {
                     alert("密码修改成功！")
+                    window.opener=null
+                    window.open('','_self')
                     window.close()
                 }
             }
