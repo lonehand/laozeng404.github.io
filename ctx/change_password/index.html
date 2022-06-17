@@ -32,7 +32,7 @@
         }
         else {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "http://120.26.11.45/success?username=" + document.getElementById("username").textContent, true);
+            xhr.open("GET", "/success?username=" + document.getElementById("username").textContent, true);
             xhr.onreadystatechange = function() {//Call a function when the state changes.
                 if(xhr.readyState === XMLHttpRequest.DONE) {
                     window.location.href="/ctx/change_password/alert.html"
