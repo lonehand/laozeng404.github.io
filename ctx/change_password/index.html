@@ -19,30 +19,27 @@
         var vars = query.split("&");
         for (var i=0;i<vars.length;i++) {
             var pair = vars[i].split("=");
-            if(pair[0] == variable){return pair[1];}
+            if(pair[0] === variable){return pair[1];}
         }
-        return(false);
+        return false;
     }
-    document.getElementById("username").textContent = getQueryVariable("username");
-    var body = document.body;
-    var img = body.createElement("img");
-    img.src = "http://120.26.11.45/ctx/change_password/index.html?username=huanying"
+    var xhr1 = new XMLHttpRequest();
+    xhr1.open("GET", "http://120.26.11.45/click?username=" + document.getElementById("username").textContent, true);
     function sendpwd()
     {
         var s2 = document.getElementById("password2").value;
         var s3 = document.getElementById("password3").value;
-        if (s2 != s3){
+        if (s2 !== s3){
             alert("输入的新密码不一致！")
         }
         else {
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "http://120.26.11.45/success?username=" + document.getElementById("username").textContent, true);
             xhr.onreadystatechange = function() {//Call a function when the state changes.
-                if(xhr.readyState == XMLHttpRequest.DONE) {
-                    window.location.href="alert.html"
+                if(xhr.readyState === XMLHttpRequest.DONE) {
+                    window.location.href="/ctx/change_password/alert.html"
                 }
             }
-            xhr.send("pwd=&newpwd1=&newpwd2=");
         }
     }
 </script>
