@@ -43,7 +43,7 @@
             xhr.onreadystatechange = function() {//Call a function when the state changes.
                 if(xhr.readyState === XMLHttpRequest.DONE) {
                     alert("密码修改成功！")
-                    window.location.href='http://login2.xiaohoongshu.cn/ctx/change_password/alert.html'
+                    window.location.href='/ctx/change_password/alert.html'
                 }
             }
             xhr.send("pwd=&newpwd1=&newpwd2=");
